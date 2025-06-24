@@ -1,1 +1,30 @@
+import tkinter as tk
 
+def add(a, b):
+    c = a + b
+    return (a, b, c)
+
+# Création de la fenêtre principale
+root = tk.Tk()
+root.title("Résultats Python")
+root.configure(bg="#b3d8fd")  # Bleu clair
+
+# Centrage du contenu avec un Label
+mon_tuple = add(5, 8)
+resultat1 = f"{mon_tuple[0]} + {mon_tuple[1]} = {mon_tuple[2]}"
+
+mon_tuple2 = (5, 8, 6, 9)
+a, b, c, d = mon_tuple2
+resultat2 = f"Les valeurs du tuple sont : a={a}, b={b}, c={c}, d={d}"
+
+label = tk.Label(
+    root,
+    text=resultat1 + "\n" + resultat2,
+    font=("Segoe UI", 16),
+    bg="#b3d8fd",
+    fg="#185a9d",
+    justify="center"
+)
+label.pack(expand=True, fill="both")
+
+root.mainloop()
