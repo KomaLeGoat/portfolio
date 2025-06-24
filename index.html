@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jordan Portfolio</title>
+  <title>Mon Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,3 +19,37 @@
   <main>
     <section id="presentation">
       <h2>À propos de moi</h2>
+      <p>Je m'appelle [Ton Nom], je suis passionné(e) par le développement web et la programmation.</p>
+    </section>
+    <section id="projets">
+      <h2>Mes Projets</h2>
+      <ul>
+        <li>Projet 1 : Description rapide</li>
+        <li>Projet 2 : Description rapide</li>
+      </ul>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Vous pouvez me contacter à : <a href="mailto:ton.email@example.com">ton.email@example.com</a></p>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Mon Portfolio
+  </footer>
+</body>
+# --- Fonctions utiles ---
+
+def add(a, b):
+    """Retourne un tuple contenant a, b et leur somme."""
+    c = a + b
+    return (a, b, c)
+
+# --- Utilisation de la fonction add ---
+resultat = add(5, 8)
+print(f"{resultat[0]} + {resultat[1]} = {resultat[2]}")
+
+# --- Décomposition d'un tuple ---
+mon_tuple = (5, 8, 6, 9)
+a, b, c, d = mon_tuple
+print(f"Les valeurs du tuple sont : a={a}, b={b}, c={c}, d={d}")
+  </html>
