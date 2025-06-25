@@ -3,37 +3,185 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mon Portfolio</title>
-  <link rel="stylesheet" href="portfolio.css">
+  <title>Jordan Bourgine | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(120deg, #185a9d 0%, #43cea2 100%);
+      min-height: 100vh;
+      color: #f3f3f3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow-x: hidden;
+     
+    }
+    header {
+      width: 100%;
+      background: rgba(24, 90, 157, 0.95);
+      text-align: center;
+      padding: 2.5rem 1rem 1.5rem 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      border-bottom-left-radius: 24px;
+      border-bottom-right-radius: 24px;
+      z-index: 2;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.7rem;
+      letter-spacing: 2px;
+      color: #7fffd4;
+    }
+    nav {
+      margin-top: 1.2rem;
+    }
+    nav a {
+      color: #7fffd4;
+      text-decoration: none;
+      margin: 0 1.2rem;
+      font-weight: 500;
+      border-radius: 18px;
+      padding: 0.4rem 1rem;
+      transition: background 0.3s, color 0.3s;
+    }
+    nav a:hover {
+      background: #7fffd4;
+      color: #185a9d;
+    }
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 650px;
+      margin: 2.5rem auto 2rem auto;
+      background: rgba(67, 206, 162, 0.18);
+      border-radius: 22px;
+      box-shadow: 0 4px 24px rgba(67,206,162,0.12);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      z-index: 1;
+    }
+    section {
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      color: #7fffd4;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      background: rgba(24, 90, 157, 0.13);
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 12px;
+      color: #f3f3f3;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 8px rgba(24,90,157,0.07);
+      transition: background 0.3s;
+    }
+    ul li:hover {
+      background: rgba(127,255,212,0.13);
+      color: #7fffd4;
+    }
+    footer {
+      width: 100%;
+      background: #185a9d;
+      color: #7fffd4;
+      text-align: center;
+      padding: 1.2rem 0;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      margin-top: auto;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.12);
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+      z-index: 2;
+    }
+    /* Animation bulles sur les côtés */
+    .bubbles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.4;
+      animation: float 8s linear infinite;
+      filter: blur(0.5px);
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 0.7;
+      }
+      80% {
+        opacity: 0.4;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+    @media (max-width: 700px) {
+      main { padding: 1.2rem 0.5rem; }
+      header h1 { font-size: 1.5rem; }
+      nav { gap: 0.5rem; }
+    }
+  </style>
+</head>
 <body>
-  <header>
-    <h1>Mon Portfolio</h1>
-    <nav>
-      <a href="#">Accueil</a>
-      <a href="#projets">Projets</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <audio id="bg-music" src="BS.mp3" loop autoplay></audio>
+<div class="hero">
+  <div class="hero-headline">LE PORTFOLIO DE JORDAN</div>
+  <img src="Jordan1.jpg" alt="Jordan1.png" class="hero-img" id="hero-img" style="cursor:pointer;">
+  <div class="hero-title">Bienvenue sur mon Portfolio</div>
+</div>
+</div>
   <div class="bubbles"></div>
   <main>
     <section id="presentation">
       <h2>À propos de moi</h2>
-      <p>Je m'appelle <strong>[Jordan Bourgine]</strong>, passionné par le développement web et la création numérique et étudiant en SLAM.</p>
+      <p>
+        Je m'appelle <strong>Jordan Bourgine</strong>, passionné par le développement web, la création numérique et étudiant en SLAM.<br>
+        Expérience professionelle:
+        <ul>
+      <h2>Expérience professionelle</h2>
+          <li>Stage de 1 mois chez <strong>Léonie Avril</strong> en 2021, où j'ai développé ma compréhension, chez les professeurs on les aidants à leurs travaille.</li>
+          <li>Participation à des projets open source sur GitHub comme pour faire se Portfolio.</li>
+            <li>J'ai participer à des projets de groupe d'ingénieurie pour créer un petit robot d'hopitale</li>
+              <li>Je programme et créer des sites aussi</li>
+                <li>Et j'ai été créateur de contenuctik tok principalement avec des vidéos éditais de certaines passion notament les jeux</li>
+      </p>
     </section>
     <section id="projets">
       <h2>Mes Projets</h2>
       <ul>
-        <li><strong>Projet 1</strong> : Description rapide de ton projet.</li>
-        <li><strong>Projet 2</strong> : Description rapide de ton projet.</li>
+        <li><strong>Portfolio Web</strong> : Un site personnel responsive pour présenter mes compétences et réalisations.</li>
+        <li><strong>Application de gestion</strong> : Outil de suivi de tâches développé en Python et Tkinter.</li>
       </ul>
     </section>
     <section id="contact">
       <h2>Contact</h2>
-      <p>Contacte-moi à : <a href="mailto:ton.email@example.com" style="color:#7fffd4;">ton.email@example.com</a></p>
+      <p>
+        Contacte-moi à : <a href="mailto:bourginejordan2@gmail.com" style="color:#7fffd4;">bourginejordan2@gmail.com</a>
+      </p>
     </section>
   </main>
   <footer>
-    &copy; 2025 Mon Portfolio
+    &copy; 2025 Jordan Bourgine | Portfolio
   </footer>
   <script>
     // Animation bulles colorées
@@ -54,5 +202,12 @@
     }
     setInterval(createBubble, 700);
   </script>
+  <script>
+  document.getElementById('hero-img').addEventListener('click', function() {
+    const audio = document.getElementById('bg-music');
+    audio.muted = false; // au cas où il serait muet
+    audio.play();
+  });
+</script>
 </body>
 </html>
